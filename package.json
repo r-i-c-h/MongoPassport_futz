@@ -1,0 +1,31 @@
+{
+  "name": "PassportNodeAuth",
+  "version": "1.0.0",
+  "description": "Futzing with MongoDB's Atlas for User Auth Per https://github.com/r-i-c-h/MongoPassport_futz.git - https://www.youtube.com/watch?v=6FOq4cUdH8k&feature=em-uploademail",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r-i-c-h/MongoPassport_futz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r-i-c-h/MongoPassport_futz/issues"
+  },
+  "homepage": "https://github.com/r-i-c-h/MongoPassport_futz#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.4.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}
