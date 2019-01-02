@@ -8,7 +8,7 @@ const session = require('express-session');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// require('./config/passport)
+require('./config/passport')(passport);
 
 /* Database Connection */
 const getMongo = require('./config/keys');
@@ -37,8 +37,8 @@ app.use(
 );
 
 // Passport middleware
-// app.use(passport.initialize());
-// app.use(passport.session());
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(flash());
 

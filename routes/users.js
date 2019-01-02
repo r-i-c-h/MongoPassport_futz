@@ -1,14 +1,13 @@
 /* eslint-disable prettier/prettier */
 const express = require('express');
 const bcrypt = require('bcrypt');
+const passport = require('passport');
 
 const router = express.Router();
 
 const User = require('../models/User');
 
-router.get('/login', (req, res) => res.render('login'));
 router.get('/register', (req, res) => res.render('register'));
-
 // Register Handler
 router.post('/register', (req, res) => {
   const { name, email, password, password2 } = req.body;
@@ -66,4 +65,18 @@ router.post('/register', (req, res) => {
     });
   }
 });
+
+router.get('/login', (req, res) => res.render('login'));
+router.post('/login', (req, res, next) => {
+  passport.authenticate('local', {
+    successRedirect: '/dashboard',
+    failureRedirect: '/users/login',
+    failureFlash: true
+  })(req, res, next);
+});
+
+
+
+
+
 module.exports = router;
