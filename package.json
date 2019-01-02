@@ -4,6 +4,8 @@
   "description": "Futzing with MongoDB's Atlas for User Auth Per https://github.com/r-i-c-h/MongoPassport_futz.git - https://www.youtube.com/watch?v=6FOq4cUdH8k&feature=em-uploademail",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +28,9 @@
     "express-session": "^1.15.6",
     "mongoose": "^5.4.1",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
   }
 }
